@@ -50,6 +50,7 @@ router.post("/signin", async (req, res) => {
   }
 
   try {
+    // from User.js
     await user.comparePassword(password);
     const token = jwt.sign({ userId: user._id }, "MY_SECRET_KEY");
     res.send({ token });

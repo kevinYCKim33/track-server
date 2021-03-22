@@ -1,4 +1,6 @@
 // this require syntax is throwing me off
+// mongoose needs to fire exactly once
+// then everything can be called like const Track = mongoose.model("Track"); so
 require("./models/User"); // only gets called at index just once
 require("./models/Track");
 const express = require("express");
